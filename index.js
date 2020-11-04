@@ -25,7 +25,11 @@ module.exports = function (opts) {
 
     const fileOpts = Object.assign({}, opts, {
       filename: file.path,
-      sourceMap: Boolean(file.sourceMap),
+      sourceMaps: Boolean(file.sourceMap),
+      caller: Object.assign(
+				{name: 'gulp-swc'},
+				opts.caller
+			)
     });
 
     swc
