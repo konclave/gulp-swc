@@ -1,6 +1,6 @@
 {
   "name": "gulp-swc",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Use swc javascript/typescript compiler with Gulp",
   "main": "index.js",
   "repository": "git@github.com:konclave/gulp-swc.git",
