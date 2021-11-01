@@ -7,8 +7,8 @@
   "author": "Ivan Vasilyev <vianomore@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@swc/core": "^1.2.37",
-    "gulp": "^3.9.1"
+    "@swc/core": "^1.2.106",
+    "gulp": "~3.9.0 || ^4.0.0"
   },
   "engines": {
     "node": ">=10"
