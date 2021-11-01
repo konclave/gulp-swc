@@ -36,8 +36,14 @@ module.exports = function (opts) {
         .then((res) => {
           if (res) {
             if (file.sourceMap && res.map) {
-              res.map.file = replaceExtension(file.relative);
-              applySourceMap(file, res.map);
+              const sourcemaps = JSON.parse(res.map);
+              sourcemaps.file = replaceExtension(file.relative);
+              sourcemaps.sources = sourcemaps.sources.map((filePath) => {
+                return file.path === filePath
+                  ? replaceExtension(file.relative)
+                  : replaceExtension(path.relative(file.path, filePath));
+              });
+              applySourceMap(file, sourcemaps);
             }
 
             file.contents = Buffer.from(res.code);
