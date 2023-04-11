@@ -1,4 +1,4 @@
 {
-  "packageManager": "yarn",
+  "packageManager": "npm",
   "cleanDocs": true
 }
