@@ -28,9 +28,9 @@ const swcOptions = {
 };
 
 gulp.task('build', () =>
-	gulp.src('./app.js')
-		.pipe(swc(swcOptions))
-		.pipe(gulp.dest('dist'))
+  gulp.src('./app.js')
+    .pipe(swc(swcOptions))
+    .pipe(gulp.dest('dist'))
 );
 ```
 
@@ -51,11 +51,11 @@ const swcOptions = {
 };
 
 gulp.task('build', () =>
-	gulp.src('./app/**/*.js')
+  gulp.src('./app/**/*.js')
     .pipe(sourcemaps.init())
-		.pipe(swc(swcOptions))
+    .pipe(swc(swcOptions))
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write('.'))
-		.pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist'))
 );
 ```
