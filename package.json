@@ -1,36 +1,36 @@
 {
-    "name": "gulp-swc",
-    "version": "1.4.0",
-    "description": "Use swc javascript/typescript compiler with Gulp",
-    "main": "index.js",
-    "repository": "git://github.com:konclave/gulp-swc.git",
-    "homepage": "https://github.com/konclave/gulp-swc#readme",
-    "author": "Ivan Vasilev <vianomore@gmail.com>",
-    "license": "MIT",
-    "peerDependencies": {
-        "@swc/core": "^1.4.8",
-        "gulp": "~3.9.0 || ^4.0.0"
-    },
-    "engines": {
-        "node": ">=18"
-    },
-    "dependencies": {
-        "plugin-error": "^2.0.1",
-        "replace-ext": "^2.0.0",
-        "vinyl-sourcemaps-apply": "^0.2.1"
-    },
-    "keywords": [
-        "gulpplugin",
-        "swc",
-        "compiler",
-        "javascript",
-        "typescript",
-        "transpiler"
-    ],
-    "scripts": {
-        "publish": "clean-publish"
-    },
-    "devDependencies": {
-        "clean-publish": "^4.3.0"
-    }
+  "name": "gulp-swc",
+  "version": "2.0.0",
+  "description": "Use swc javascript/typescript compiler with Gulp",
+  "main": "index.js",
+  "repository": "git://github.com:konclave/gulp-swc.git",
+  "homepage": "https://github.com/konclave/gulp-swc#readme",
+  "author": "Ivan Vasilev <vianomore@gmail.com>",
+  "license": "MIT",
+  "peerDependencies": {
+    "@swc/core": "^1.4.11",
+    "gulp": "~3.9.0 || ^4.0.0 || ^5.0.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "plugin-error": "^2.0.1",
+    "replace-ext": "^2.0.0",
+    "vinyl-sourcemaps-apply": "^0.2.1"
+  },
+  "keywords": [
+    "gulpplugin",
+    "swc",
+    "compiler",
+    "javascript",
+    "typescript",
+    "transpiler"
+  ],
+  "scripts": {
+    "publish": "clean-publish"
+  },
+  "devDependencies": {
+    "clean-publish": "^4.3.0"
+  }
 }
