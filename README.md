@@ -7,7 +7,9 @@
 ```
 npm install gulp-swc @swc/core gulp --save-dev
 ```
+
 or
+
 ```
 yarn add gulp-swc @swc/core gulp --dev
 ```
@@ -23,14 +25,12 @@ const swc = require('gulp-swc');
 // Any options to configure swc: https://swc.rs/docs/configuring-swc
 const swcOptions = {
   jsc: {
-    target: "es5",
-  }
+    target: 'es5',
+  },
 };
 
 gulp.task('build', () =>
-  gulp.src('./app.js')
-    .pipe(swc(swcOptions))
-    .pipe(gulp.dest('dist'))
+  gulp.src('./app.js').pipe(swc(swcOptions)).pipe(gulp.dest('dist')),
 );
 ```
 
@@ -40,22 +40,22 @@ gulp.task('build', () =>
 const gulp = require('gulp');
 const swc = require('gulp-swc');
 const sourcemaps = require('gulp-sourcemaps');
-const babel = require('gulp-babel');
 const concat = require('gulp-concat');
 
 const swcOptions = {
   jsc: {
-    target: "es5",
+    target: 'es5',
   },
-  sourceMaps: true
+  sourceMaps: true,
 };
 
 gulp.task('build', () =>
-  gulp.src('./app/**/*.js')
+  gulp
+    .src('./app/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(swc(swcOptions))
     .pipe(concat('app.js'))
     .pipe(sourcemaps.write('.'))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('dist')),
 );
 ```
