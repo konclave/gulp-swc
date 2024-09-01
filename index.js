@@ -1,13 +1,8 @@
 const swc = require('@swc/core');
 const path = require('path');
-const replaceExt = require('replace-ext');
 const PluginError = require('plugin-error');
-const applySourceMap = require('vinyl-sourcemaps-apply');
 const { Transform } = require('stream');
-
-function replaceExtension(fp) {
-  return path.extname(fp) ? replaceExt(fp, '.js') : fp;
-}
+const { replaceExtension, applySourceMap } = require('./helpers');
 
 module.exports = function (opts) {
   opts = opts || {};

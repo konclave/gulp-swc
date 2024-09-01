@@ -1,6 +1,6 @@
 {
   "name": "gulp-swc",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "Use swc javascript/typescript compiler with Gulp",
   "main": "index.js",
   "repository": "git://github.com:konclave/gulp-swc.git",
@@ -8,7 +8,7 @@
   "author": "Ivan Vasilev <vianomore@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
-    "@swc/core": "^1.5.0",
+    "@swc/core": "^1.7.20",
     "gulp": "~3.9.0 || ^4.0.0 || ^5.0.0"
   },
   "engines": {
@@ -16,8 +16,7 @@
   },
   "dependencies": {
     "plugin-error": "^2.0.1",
-    "replace-ext": "^2.0.0",
-    "vinyl-sourcemaps-apply": "^0.2.1"
+    "source-map": "^0.7.4"
   },
   "keywords": [
     "gulpplugin",
@@ -31,6 +30,6 @@
     "publish": "clean-publish"
   },
   "devDependencies": {
-    "clean-publish": "^4.3.0"
+    "clean-publish": "^5.0.0"
   }
 }
